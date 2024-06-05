@@ -14,6 +14,10 @@ const navLinks = [
     href: "/posts",
     label: "Posts",
   },
+  {
+    href: "/new-post",
+    label: "New Post",
+  },
 ];
 
 const Header = () => {
