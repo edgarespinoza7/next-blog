@@ -1,8 +1,9 @@
 "use server";
 import prisma from "@/lib/db";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { redirect } from "next/dist/server/api-utils";
+
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function createPost(formData: FormData) {
   const { isAuthenticated } = getKindeServerSession();
