@@ -1,4 +1,5 @@
 import PostsList from "@/components/PostsList";
+import { revalidatePath } from "next/cache";
 import { Suspense } from "react";
 
 
@@ -11,6 +12,10 @@ const Posts = () => {
       </Suspense>
     </main>
   );
+
+  //revalidate 
+
+  revalidatePath("/posts");
 };
 
 export default Posts;
